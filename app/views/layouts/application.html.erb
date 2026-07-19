@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Website" %></title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Website">
+    <meta name="application-name" content="<%= site_name %>">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= render 'layouts/og_meta_tags', tags: {
+      title: title,
+      description: description,
+      author: author,
+      type: "website",
+      site_name: site_name,
+      url: canonical_url,
+    } %>
+
+    <%= tag :link, rel: "canonical", href: canonical_url %>
+
+    <%= tag :meta, name: "robots", content: robots_content %>
 
     <%= yield :head %>
 
