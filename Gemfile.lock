@@ -94,6 +94,7 @@ GEM
     debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    decant (0.4.0)
     drb (2.2.3)
     erb (6.0.5)
     erubi (1.13.1)
@@ -295,6 +296,7 @@ DEPENDENCIES
   brakeman
   bundler-audit
   debug
+  decant
   importmap-rails
   propshaft
   puma (>= 5.0)
@@ -331,6 +333,7 @@ CHECKSUMS
   crass (1.0.7) sha256=94868719948664c89ddcaf0a37c65048413dfcb1c869470a5f7a7ceb5390b295
   date (3.5.1) sha256=750d06384d7b9c15d562c76291407d89e368dda4d4fff957eb94962d325a0dc0
   debug (1.11.1) sha256=2e0b0ac6119f2207a6f8ac7d4a73ca8eb4e440f64da0a3136c30343146e952b6
+  decant (0.4.0) sha256=31a166c984452ba2ce4ce3286b7f1c73f81ad9ea0d58520b598f174efe2cf7d2
   drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
   erb (6.0.5) sha256=858e63488cb796c9daba8b6e9ff4b3879c395022049be9a66a8e00980e612eac
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
