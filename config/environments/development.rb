@@ -50,4 +50,16 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 
   config.hotwire.spark.html_paths += %w[ content ]
+
+  # ---
+
+  # Allowed hosts and default URL options.
+  config.hosts = [
+    "skyblip.localhost",
+    "localhost",
+    "127.0.0.1",
+    /.*\.ts\.net/  # Tailscale
+  ]
+
+  routes.default_url_options = { host: config.hosts.first, port: ENV.fetch("PORT", 8119) }
 end
