@@ -1,0 +1,25 @@
+@layer components {
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    max-inline-size: var(--measure);
+    margin-inline: auto;
+    padding-block: 1.25rem;
+    padding-inline: var(--gutter);
+  }
+
+  .site-nav-brand { text-decoration: none; }
+
+  .site-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .site-nav .locale-switcher { margin-inline-start: auto; }
+
+  .wordmark-nav { font-size: 1.375rem; }
+}

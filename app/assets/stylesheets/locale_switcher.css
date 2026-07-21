@@ -1,8 +1,5 @@
 @layer components {
   .locale-switcher {
-    position: absolute;
-    inset-block-start: 1.25rem;
-    inset-inline-end: 1.5rem;
     font-size: 0.8125rem;
     letter-spacing: 0.08em;
   }
