@@ -9,4 +9,5 @@
 
   .pledge p { color: var(--pledge-ink); max-inline-size: 40rem; }
   .pledge strong { color: var(--paper); }
+  .pledge .cta { color: var(--quiet); }
 }
