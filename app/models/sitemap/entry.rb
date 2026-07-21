@@ -61,7 +61,7 @@ class Sitemap::Entry
   end
 
   def find_source_file
-    files = CONTENT_PATTERNS.flat_map { |pattern| Dir.glob(pattern % slug) }
+    files = CONTENT_PATTERNS.flat_map { |pattern| Dir.glob(pattern % source_slug) }.uniq
 
     case files.size
     when 0 then nil
@@ -69,5 +69,15 @@ class Sitemap::Entry
     else
       raise StandardError, "Multiple source files found for '#{slug}': #{files.join(', ')}"
     end
+  end
+
+  def source_slug
+    locale, _, base = slug.partition("/")
+    locale = nil unless I18n.available_locales.without(I18n.default_locale).map(&:to_s).include?(locale)
+
+    page_slug = locale ? (base.presence || "index") : slug
+    Page.find(page_slug, locale: locale || I18n.default_locale).slug
+  rescue Decant::FileNotFound
+    slug
   end
 end

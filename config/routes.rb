@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get "/.well-known/*", to: ->(_env) { [ 204, {}, [] ] }
 
-  root "pages#show", slug: "index"
-  get "/*slug", to: "pages#show", as: :page
+  scope "(:locale)", locale: /#{I18n.available_locales.without(I18n.default_locale).join("|")}/ do
+    root "pages#show", slug: "index"
+    get "/*slug", to: "pages#show", as: :page, format: false, constraints: { slug: /(?!index\z).+/ }
+  end
 end

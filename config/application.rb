@@ -40,5 +40,10 @@ module Website
     config.generators.system_tests = nil
 
     config.assets.paths << Rails.root.join("content")
+
+    config.i18n.available_locales = %i[ en fr ]
+    config.i18n.default_locale = :en
+
+    config.action_dispatch.rescue_responses["Decant::FileNotFound"] = :not_found
   end
 end

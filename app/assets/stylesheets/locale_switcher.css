@@ -1,0 +1,19 @@
+/* Locale switcher — see app/views/layouts/_locale_switcher.html.erb.
+ * Absolutely positioned against the document (the partial is a direct child
+ * of <body>, no positioned ancestor), so it scrolls away with the page. */
+.locale-switcher {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+}
+.locale-switcher a,
+.locale-switcher span {
+  padding: 0.25rem 0.375rem;
+  text-decoration: none;
+  color: var(--quiet);
+}
+.locale-switcher span[aria-current="true"] { color: var(--ink); font-weight: 700; }
+.locale-switcher span[aria-disabled="true"] { opacity: .45; }
+.locale-switcher a:hover { color: var(--blip); }

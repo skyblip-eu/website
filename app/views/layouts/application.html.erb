@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
     <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,6 +20,8 @@
 
     <%= tag :link, rel: "canonical", href: canonical_url %>
 
+    <%= hreflang_link_tags %>
+
     <%= tag :meta, name: "robots", content: robots_content %>
 
     <%= yield :head %>
@@ -37,6 +39,8 @@
   </head>
 
   <body>
+    <%= render "layouts/locale_switcher" %>
+
     <%= yield %>
   </body>
 </html>
