@@ -26,4 +26,22 @@
   }
 
   .card p { font-size: 0.9375rem; color: var(--card-ink); margin-block: 0.625rem 0; }
+
+  .card-featured {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 2.5rem;
+    padding: 2rem;
+  }
+
+  .card-featured-body { flex: 1 1 24rem; }
+
+  .card-featured img {
+    max-block-size: 20rem;
+    inline-size: auto;
+    margin-inline: auto;
+    mix-blend-mode: multiply;
+  }
 }
