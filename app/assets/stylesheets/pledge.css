@@ -1,0 +1,12 @@
+@layer components {
+  .pledge {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    margin-block: 1.5rem 6rem;
+  }
+
+  .pledge p { color: var(--pledge-ink); max-inline-size: 40rem; }
+  .pledge strong { color: var(--paper); }
+}

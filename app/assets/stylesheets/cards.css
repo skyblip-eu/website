@@ -1,0 +1,29 @@
+@layer components {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(17.5rem, 100%), 1fr));
+    gap: 1.25rem;
+    margin-block-start: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .card h3 { font-size: 1.125rem; }
+
+  .card .tag {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    margin-block-start: 0.25rem;
+  }
+
+  .card p { font-size: 0.9375rem; color: var(--card-ink); margin-block: 0.625rem 0; }
+}

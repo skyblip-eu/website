@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def site_name
-    "Skyblip"
+    "skyBlip"
   end
 
   def title
@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def author
-    "Skyblip"
+    "François Catuhe"
   end
 
   def canonical_url

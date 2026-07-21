@@ -1,0 +1,39 @@
+@layer base {
+  body > :where(header.hero, section) {
+    max-inline-size: var(--measure);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  body > :where(section) { padding-block: 2.5rem; }
+
+  .hero { padding-block: clamp(4.5rem, 12vw, 6rem) 1.5rem; }
+
+  .tagline {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: -0.0125em;
+    margin-block: 1.75rem 0.75rem;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-inline-size: 45rem;
+    margin-block: 0 0.5rem;
+  }
+
+  .kicker {
+    font-size: 0.8125rem;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+    color: var(--blip);
+    margin-block: 0 1rem;
+    font-weight: 600;
+  }
+
+  .product-tagline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-block: 1.125rem 0.25rem;
+  }
+}

@@ -1,0 +1,23 @@
+@layer reset, base, components;
+
+:root {
+  --ink: #0B1220;
+  --paper: #F4F1EA;
+  --blip: #FF4F1F;
+  --signal: #1E6FEB;
+  --quiet: #8DA3B8;
+  --coverage: #19C37D;
+
+  --ink-soft: #3A4655;
+  --ink-muted: #5C6B7C;
+  --card-ink: #2B3542;
+  --card-bg: #FDFCF9;
+  --card-border: #E2DDD2;
+  --pledge-ink: #C6CDD5;
+
+  --font-sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --measure: 55rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --radius: 14px;
+}

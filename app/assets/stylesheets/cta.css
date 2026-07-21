@@ -1,0 +1,7 @@
+@layer components {
+  .cta {
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+  .cta:hover { color: var(--blip); }
+}
