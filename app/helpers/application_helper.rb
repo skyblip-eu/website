@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def title
-    [ @page&.title.presence, site_name ].uniq.compact.join(" · ")
+    [ site_name, @page&.title.presence ].uniq.compact.join(" · ")
   end
 
   def description
