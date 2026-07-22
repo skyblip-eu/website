@@ -17,14 +17,20 @@
 
   .table-scroll thead th {
     font-size: var(--text-xs);
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--quiet);
   }
 
   .table-scroll tbody th {
-    font-weight: 600;
+    font-weight: 700;
     white-space: nowrap;
   }
+
+  /* Spec values are data → mono (row-header labels stay sans) */
+  .table-scroll td { font-family: var(--font-mono); }
+
+  /* …but product-name columns are names, not data → back to sans */
+  .table-scroll table.modules td:first-of-type { font-family: var(--font-sans); }
 }

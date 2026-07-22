@@ -10,6 +10,7 @@
   .hero { padding-block: clamp(var(--space-2xl), 7vw, 4rem) var(--space-l); }
 
   .tagline {
+    font-family: var(--font-display);
     font-size: clamp(var(--text-l), 3.5vw, 1.5rem);
     font-weight: 700;
     letter-spacing: -0.0125em;
@@ -28,10 +29,11 @@
     text-transform: uppercase;
     color: var(--blip);
     margin-block: 0 var(--space-m);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .product-tagline {
+    font-family: var(--font-display);
     font-size: var(--text-l);
     font-weight: 700;
     margin-block: var(--space-m) var(--space-2xs);

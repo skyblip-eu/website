@@ -38,10 +38,14 @@
   ::selection { background: var(--blip); color: var(--paper); }
 
   h3 {
+    font-family: var(--font-display);
     font-size: var(--text-xl);
     letter-spacing: -0.015em;
     margin-block: 0 var(--space-s);
   }
 
   .note { font-size: var(--text-s); color: var(--ink-muted); }
+
+  /* Brand: mono for measurements, callsigns, frequencies, firmware strings */
+  .mono { font-family: var(--font-mono); font-size: 0.95em; }
 }
