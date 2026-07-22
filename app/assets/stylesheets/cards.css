@@ -1,42 +1,42 @@
 @layer components {
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(17.5rem, 100%), 1fr));
-    gap: 1.25rem;
-    margin-block-start: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(28ch, 100%), 1fr));
+    gap: var(--space-l) var(--space-inline-m);
+    margin-block-start: var(--space-l);
   }
 
   .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
+    border-radius: var(--space-inline-s);
+    padding: var(--space-l) var(--space-inline-l);
   }
 
-  .card h3 { font-size: 1.125rem; }
+  .card h3 { font-size: var(--text-m); }
 
   .card .tag {
     display: block;
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--quiet);
-    margin-block-start: 0.25rem;
+    margin-block-start: var(--space-2xs);
   }
 
-  .card p { font-size: 0.9375rem; color: var(--card-ink); margin-block: 0.625rem 0; }
+  .card p { font-size: var(--text-s); color: var(--card-ink); margin-block: var(--space-s) 0; }
 
   .card-featured {
     grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1rem 2.5rem;
-    padding: 2rem;
+    gap: var(--space-m) var(--space-inline-2xl);
+    padding: var(--space-xl) var(--space-inline-xl);
   }
 
-  .card-featured-body { flex: 1 1 24rem; }
+  .card-featured-body { flex: 1 1 38ch; }
 
   .card-featured img {
     max-block-size: 20rem;

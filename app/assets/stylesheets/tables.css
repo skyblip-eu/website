@@ -1,22 +1,22 @@
 @layer components {
-  .table-scroll { overflow-x: auto; margin-block: 1.5rem 3rem; }
+  .table-scroll { overflow-x: auto; margin-block: var(--space-l) var(--space-3xl); }
 
   .table-scroll table {
     border-collapse: collapse;
     inline-size: 100%;
-    font-size: 0.875rem;
+    font-size: var(--text-s);
   }
 
   .table-scroll th,
   .table-scroll td {
     text-align: left;
-    padding: 0.5rem 0.75rem;
+    padding: var(--space-xs) var(--space-inline-xs);
     border-block-end: 1px solid var(--card-border);
     vertical-align: top;
   }
 
   .table-scroll thead th {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.04em;
