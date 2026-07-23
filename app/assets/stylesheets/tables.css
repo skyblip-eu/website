@@ -28,9 +28,7 @@
     white-space: nowrap;
   }
 
-  /* Spec values are data → mono (row-header labels stay sans) */
   .table-scroll td { font-family: var(--font-mono); }
 
-  /* …but product-name columns are names, not data → back to sans */
   .table-scroll table.modules td:first-of-type { font-family: var(--font-sans); }
 }

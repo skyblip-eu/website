@@ -46,6 +46,5 @@
 
   .note { font-size: var(--text-s); color: var(--ink-muted); }
 
-  /* Brand: mono for measurements, callsigns, frequencies, firmware strings */
   .mono { font-family: var(--font-mono); font-size: 0.95em; }
 }

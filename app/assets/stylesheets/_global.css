@@ -1,6 +1,5 @@
 @layer reset, base, components;
 
-/* Inter — body text (SIL OFL 1.1). Neo-grotesque, Rasmus Andersson. Self-hosted. */
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -16,7 +15,6 @@
   src: url("Inter-Bold.woff2") format("woff2");
 }
 
-/* Fira Sans — titles (SIL OFL 1.1). Humanist sans, Carrois/Spiekermann. Self-hosted. */
 @font-face {
   font-family: "Fira Sans";
   font-style: normal;
@@ -32,7 +30,6 @@
   src: url("FiraSans-Bold.woff2") format("woff2");
 }
 
-/* B612 Mono — Airbus cockpit typeface (SIL OFL 1.1). Data only. Self-hosted. */
 @font-face {
   font-family: "B612 Mono";
   font-style: normal;
@@ -42,8 +39,6 @@
 }
 
 :root {
-  /* Fallback palette (hex) for browsers without relative color syntax
-     (pre Safari 16.4 / Chrome 119 / Firefox 128) — overridden below. */
   --ink: #0A1220;
   --paper: #F4F1EA;
   --blip: #FF4F1F;
@@ -61,26 +56,23 @@
   --font-display: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "B612 Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
-  /* Type scale */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-s: 0.875rem;    /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-m: 1.125rem;    /* 18px */
-  --text-l: 1.25rem;     /* 20px */
-  --text-xl: 1.375rem;   /* 22px */
+  --text-xs: 0.75rem;
+  --text-s: 0.875rem;
+  --text-base: 1rem;
+  --text-m: 1.125rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.375rem;
 
-  /* Spacing — vertical rhythm (block), 4px grid on 1rem base */
-  --space-2xs: 0.25rem;  /*  4px */
-  --space-xs: 0.5rem;    /*  8px */
-  --space-s: 0.75rem;    /* 12px */
-  --space-m: 1rem;       /* 16px */
-  --space-l: 1.5rem;     /* 24px */
-  --space-xl: 2rem;      /* 32px */
-  --space-2xl: 2.5rem;   /* 40px */
-  --space-3xl: 3rem;     /* 48px */
-  --space-4xl: 6rem;     /* 96px */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 6rem;
 
-  /* Spacing — horizontal rhythm (inline), character-relative on 1ch base */
   --space-inline-2xs: 0.5ch;
   --space-inline-xs: 1ch;
   --space-inline-s: 1.5ch;
@@ -89,29 +81,25 @@
   --space-inline-xl: 3ch;
   --space-inline-2xl: 4ch;
 
-  /* Layout */
   --measure: 88ch;
   --gutter: clamp(var(--space-inline-s), 4vw, var(--space-inline-xl));
 }
 
 @supports (color: oklch(from red l c h)) {
   :root {
-    /* Anchors */
-    --ink: oklch(18.31% 0.031 260); /* #0A1220 */
-    --paper: oklch(95.85% 0.010 88); /* #F4F1EA */
-    --blip: oklch(67.06% 0.2195 35.03); /* #FF4F1F */
-    --coverage: oklch(72.19% 0.1636 158.23); /* #19C37D */
+    --ink: oklch(18.31% 0.031 260);
+    --paper: oklch(95.85% 0.010 88);
+    --blip: oklch(67.06% 0.2195 35.03);
+    --coverage: oklch(72.19% 0.1636 158.23);
 
-    /* Ink family: hue-locked to --ink, lightness ladder */
-    --card-ink: oklch(from var(--ink) 33% 0.028 h); /* #2D3644 */
-    --ink-soft: oklch(from var(--ink) 39% 0.030 h); /* #3C4655 */
-    --ink-muted: oklch(from var(--ink) 52% 0.033 h); /* #5E6A7C */
-    --quiet: oklch(from var(--ink) 70.5% 0.040 h); /* #92A1B9 */
-    --pledge-ink: oklch(from var(--ink) 84.5% 0.014 h); /* #C7CCD6 */
-    --signal: oklch(from var(--ink) 57% 0.20 h); /* #236FEA */
+    --card-ink: oklch(from var(--ink) 33% 0.028 h);
+    --ink-soft: oklch(from var(--ink) 39% 0.030 h);
+    --ink-muted: oklch(from var(--ink) 52% 0.033 h);
+    --quiet: oklch(from var(--ink) 70.5% 0.040 h);
+    --pledge-ink: oklch(from var(--ink) 84.5% 0.014 h);
+    --signal: oklch(from var(--ink) 57% 0.20 h);
 
-    /* Paper family: hue-locked to --paper */
-    --card-bg: oklch(from var(--paper) 99.1% 0.004 h); /* #FDFCF9 */
-    --card-border: oklch(from var(--paper) 89.9% 0.016 h); /* #E2DDD2 */
+    --card-bg: oklch(from var(--paper) 99.1% 0.004 h);
+    --card-border: oklch(from var(--paper) 89.9% 0.016 h);
   }
 }

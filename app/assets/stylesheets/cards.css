@@ -38,8 +38,6 @@
 
   .card-featured--reverse { flex-direction: row-reverse; }
 
-  /* Panel photo is a full-frame device (Go photo is mostly antenna) —
-     shrink it so the device reads at the same visual size as the Go */
   .card-featured.card-featured--reverse img { max-inline-size: 15rem; max-block-size: 15rem; }
 
   .card-featured-body { flex: 1 1 22ch; }
