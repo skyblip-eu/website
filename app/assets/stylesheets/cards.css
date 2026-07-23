@@ -33,13 +33,21 @@
     flex-wrap: wrap;
     align-items: center;
     gap: var(--space-m) var(--space-inline-2xl);
-    padding: var(--space-xl) var(--space-inline-xl);
+    padding: var(--space-2xl) var(--space-inline-2xl);
   }
 
-  .card-featured-body { flex: 1 1 38ch; }
+  .card-featured--reverse { flex-direction: row-reverse; }
+
+  /* Panel photo is a full-frame device (Go photo is mostly antenna) —
+     shrink it so the device reads at the same visual size as the Go */
+  .card-featured.card-featured--reverse img { max-inline-size: 15rem; max-block-size: 15rem; }
+
+  .card-featured-body { flex: 1 1 22ch; }
 
   .card-featured img {
     max-block-size: 20rem;
+    max-inline-size: 22rem;
+    min-inline-size: 0;
     inline-size: auto;
     margin-inline: auto;
     mix-blend-mode: multiply;
